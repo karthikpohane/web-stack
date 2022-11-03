@@ -1,0 +1,33 @@
+figure {
+    display: flex;
+}
+table, th, tr, td, caption{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.5rem;
+    border-collapse: collapse;
+}
+header{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: large;
+    font-style: italic;
+}
+h1 {
+    text-align: center;
+}
+h2, h3, h4 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-decoration: underline;
+}
+body {
+    background-color: #f5eeee;
+    color: rgb(0, 0, 0);
+    font-family: 'Anek Malayalam', sans-serif;
+    font-size: larger;
+}
+a:hover, a:active{
+    color: #0022ff;
+}
+
+
+
