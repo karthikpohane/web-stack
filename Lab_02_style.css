@@ -1,0 +1,30 @@
+fieldset {
+    background-color: #eeeeee;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  input {
+    margin: 5px;
+  }
+  p {
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*can directly align it to centre using class atributes in  the img tag itself*/
+  }
+  .centre{
+    margin-left: 650px
+  }
+  /*For setting the size of the icons being displayed*/

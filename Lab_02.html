@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab_02_style.css">
+    <link rel="icon" href="D:\MCA\2nd Trimester\Web stack devp\vote_logo.png" type="image/x-icon">
+    <!--For Icones of social media accounts and its style and font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Information Page</title>
+</head>
+<body>
+    <hr>
+    <p><b><i>“Voting is your civic duty.” </i></b></p>
+    <hr>
+    <fieldset>
+    <legend>#voteINDIAvote</legend>
+    <img src="D:\MCA\2nd Trimester\Web stack devp\Elections-and-Indian-Democracy-2048x1024.jpg" alt="voteINDIAvote" style="width: 700px; height: 400px;" >
+    <!--can directly use width = "700" height = "500"-->
+    <p><b><i>India’s elections are neither free nor fair, and therefore India cannot really be called an “electoral democracy.” It is but natural that international agencies and watchdogs describe India as a part-free nation with its democratic process “on a path of steep decline” that could turn the country into an “electoral autocracy.”</i></b></p>
+    </fieldset>
+    <br>
+    <fieldset>
+    <article>
+        <legend><h2>    Why Your Vote Matters    </h2></legend>
+        <p style="font-family: agencies;">
+            If you ever think that just one vote in a sea of millions cannot make much of a difference, consider some of the closest elections in India’s history.
+        </p>
+        <p style="font-family: agencies;">
+            Your vote may not directly elect the president, but if your vote joins enough others in your voting district or county, your vote undoubtedly matters when it comes to electoral results. Most states have a “winner take all” system where the popular vote winner gets the state’s electoral votes. There are also local and state elections to consider. While presidential or other national elections usually get a significant voter turnout, local elections are typically decided by a much smaller group of voters.
+        </p>
+        <hr>
+        <p style="font-family: agencies;">Listen to this audio circulated by the Election Commission Of India in Association with Govt. India. SVEEP ~ voters motivational song on the right to adult franchise.<br><b><i>"Vote Ek Adhikar Humara"</i></b></p>
+        <p>
+            <audio controls>
+                <source src="D:\MCA\2nd Trimester\Web stack devp\Vote Ek Adhikar Humara.ogg" type="audio/ogg">
+                <source src="D:\MCA\2nd Trimester\Web stack devp\Vote Ek Adhikar Humara.mpeg" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+    
+        </p>
+
+    </article>
+    </fieldset>
+    <br>
+    <article>
+        <fieldset>
+            <legend>GeoLocation</legend>
+            
+            <p>Find Our Office from Your Location</p>
+            <center>
+            <button onclick="getlocation();"> Show Position on Map</button>
+            <br>
+            <!--
+            <p id="demo"></p>
+            <script>
+                var x = document.getElementById("demo");
+                function getLocation() {
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+                }
+                
+                function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude +
+                  "<br>Longitude: " + position.coords.longitude;
+                }
+                </script>-->
+                
+                <div id="demo" style="width: 700px; height: 300px;"></div>   
+        
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+          
+        <script type="text/javascript">   
+        function getlocation(){   
+            if(navigator.geolocation){   
+                navigator.geolocation.getCurrentPosition(showPos, showErr);   
+            }  
+            else{  
+                alert("Sorry! your Browser does not support Geolocation API")  
+            }  
+        }   
+        //Showing Current Poistion on Google Map  
+        function showPos(position){   
+            latt = position.coords.latitude;   
+            long = position.coords.longitude;   
+            var lattlong = new google.maps.LatLng(latt, long);   
+            var myOptions = {   
+                center: lattlong,   
+                zoom: 15,   
+                mapTypeControl: true,   
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}   
+            }   
+            var maps = new google.maps.Map(document.getElementById("demo"), myOptions);   
+            var markers =   
+            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"});   
+        }   
+  
+        //Handling Error and Rejection  
+             function showErr(error) {  
+              switch(error.code){  
+              case error.PERMISSION_DENIED:  
+             alert("User denied the request for Geolocation API.");  
+              break;  
+             case error.POSITION_UNAVAILABLE:  
+             alert("USer location information is unavailable.");  
+            break;  
+            case error.TIMEOUT:  
+            alert("The request to get user location timed out.");  
+            break;  
+           case error.UNKNOWN_ERROR:  
+            alert("An unknown error occurred.");  
+            break;  
+           }  
+        }         
+        </script> 
+            </center>
+        </fieldset>
+    </article>
+    <br>
+    <article>
+        <fieldset>
+            <legend> Canvas </legend>
+            <center>
+                <canvas id="mycanvas" width="700px" height="300px" style="border:1px solid #000000;"></canvas>
+            <script>
+                var canvas = document.getElementById("mycanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.fillText("#voteINDIAvote",250,150);
+            </script>
+            </center>
+        </fieldset>
+        <br>
+    </article>
+    <fieldset>
+        <legend>   Watch This  </legend>
+                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/zwX_8l0lKw4" title="visit or call on 1950" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe><br><br>Visit <a href="https://www.nvsp.in/">www.nvsp.in</a> or call on 1950</p>
+    </fieldset>
+    <br>
+    <article>
+        <fieldset>
+            <legend>Connect with us</legend>
+            <p>
+                <form action="/action_page.php" method="get">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name">
+                    <br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com">
+                    <br>
+                    <label for="message">Your Suggestions:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="10" cols="40" placeholder="Enter yor suggestions here"></textarea>
+                    <br>
+                    <button type="reset" value="Reset">Reset</button> &nbsp;&nbsp;
+                    <button type="submit" value="Submit">Submit</button>
+                </form>
+            </p>
+        </fieldset>
+        <hr>
+        <footer>
+            <p>Copyright 1999-2022 by Refsnes Data. All Rights Reserved.<br>©codeHUB</p>
+        </footer>
+
+
+</body>
+</html>
