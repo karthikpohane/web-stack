@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="lab4.xsl"?>
+<vehicle>
+
+    <customer>
+        <fname>Karthik</fname>
+        <lname>Pohane</lname>
+        <email>karthik.pohane@mca.christuniversity.in</email>
+        <number>9566214423</number>
+        <address>Wardha</address>
+        <count>Zero</count>
+    </customer>
+    <customer>
+        <fname>Aniket</fname>
+        <lname>Singh</lname>
+        <email>aniket.singh@mca.christuniversity.in</email>
+        <number>6204081417</number>
+        <address>Bangalore</address>
+        <count>Zero</count>
+    </customer>
+    <customer>
+        <fname>Harsh</fname>
+        <lname>Vardhan</lname>
+        <email>harsh.vardhan@mca.christuniversity.in</email>
+        <number>7352917077</number>
+        <address>Patna</address>
+        <count>Zero</count>
+    </customer>
+    <customer>
+        <fname>Adithyo</fname>
+        <lname>Gope</lname>
+        <email>aditya.gope@mca.christuniversity.in</email>
+        <number>8403217773</number>
+        <address>Dharamshala</address>
+        <count>Zero</count>
+    </customer>
+    <customer>
+        <fname>Arithra</fname>
+        <lname>Sarkar</lname>
+        <email>arithra.sarkar@mca.christuniversity.in</email>
+        <number>9431150077</number>
+        <address>Kolkata</address>
+        <count>Zero</count>
+    </customer>
+    <customer>
+        <fname>Tyrell</fname>
+        <lname>Fernandiz</lname>
+        <email>tyrell.farnandiz@mca.christuniversity.in</email>
+        <number>1234567890</number>
+        <address>Goa</address>
+        <count>Zero</count>
+    </customer>
+</vehicle>
