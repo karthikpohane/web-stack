@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Lab_03.xsl"?>
+<administrator>
+   <admin_information>
+      <admin>
+         <id>101</id>
+         <username>kartiiikk_</username>
+         <password>********</password>
+         <firstname>Karthik</firstname>
+         <lastname>Pohane</lastname>
+         <age>21</age>
+         <phone>7558790280</phone>
+      </admin>
+   </admin_information>
+   <candidate_information>
+      <candidate>
+         <CandidateID>2247211</CandidateID>
+         <C_password>********</C_password>
+         <name>Aniket Singh</name>
+         <age>21</age>
+         <symbol>some_symbol</symbol>
+         <possition>activist</possition>
+         <from>Kolkata_sector01</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+      <candidate>
+         <CandidateID>2247212</CandidateID>
+         <C_password>********</C_password>
+         <name>Debanjan Basu</name>
+         <age>21</age>
+         <symbol>some_symbol</symbol>
+         <possition>activist</possition>
+         <from>Kolkata_sector02</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+      <candidate>
+         <CandidateID>2247213</CandidateID>
+         <C_password>********</C_password>
+         <name>Arunabh Krishna</name>
+         <age>24</age>
+         <symbol>some_symbol</symbol>
+         <possition>activist</possition>
+         <from>Kolkata_sector03</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+      <candidate>
+         <CandidateID>2247214</CandidateID>
+         <C_password>********</C_password>
+         <name>Adityo gope</name>
+         <age>24</age>
+         <symbol>some_symbol</symbol>
+         <possition>activist</possition>
+         <from>Kolkata_sector04</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+      <candidate>
+         <CandidateID>2247215</CandidateID>
+         <C_password>********</C_password>
+         <name>Aritro sarkar</name>
+         <age>24</age>
+         <symbol>some_symbol</symbol>
+         <possition>MLA</possition>
+         <from>Kolkata_sector03</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+      <candidate>
+         <CandidateID>2247216</CandidateID>
+         <C_password>********</C_password>
+         <name>Tyrell Farnandis</name>
+         <age>22</age>
+         <symbol>some_symbol</symbol>
+         <possition>activist</possition>
+         <from>Kolkata_sector01</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </candidate>
+   </candidate_information>
+   <voters_information>
+      <voter>
+         <id>01</id>
+         <v_password>********</v_password>
+         <name>Shivam jakkanwar</name>
+         <votersID>23234432x2</votersID>
+         <age>19</age>
+         <from>Kolkata_sector02</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </voter>
+      <voter>
+         <id>02</id>
+         <v_password>********</v_password>
+         <name>Shakti Aishwarya</name>
+         <votersID>23234432x3</votersID>
+         <age>19</age>
+         <from>Kolkata_sector01</from>
+         <region>West Bengal</region>
+         <photo>some_photo</photo>
+      </voter>
+   </voters_information>
+</administrator>
