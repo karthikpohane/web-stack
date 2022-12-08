@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("./bg6.webp");
+        /* background-repeat: no-repeat ; */
+        /* background-size: cover; */
+    }
+    form{
+        box-shadow: 2px 2px 7px 1px grey;
+        /* border: 2px solid black; */
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        padding: 0.6rem;
+        background: WHITE;
+        margin-bottom: 4.9rem;
+        margin-top: 4.5rem;
+    }
+    form:hover{
+        box-shadow: 2px 2px 9px 1px grey;
+    }
+    h2,h1{
+        text-align: center;
+    }
+    input[type="submit"]
+    {
+        border: 2px solid #d29751;
+        width: 80%;
+        text-align: center;
+        /* margin: auto; */
+        height: 1.9rem;
+        color: white;
+        background-color: #d29751;
+        border-radius: 10px;
+        margin-top: 0.7rem;
+        /* font-size: larger; */
+        font-size: 1rem;
+        padding-bottom: 1.6rem;
+        
+    }
+    input{
+        margin-bottom: 1.9rem;
+        width: 90%;
+        padding: 0.7rem;
+    }
+</style>
+<body>
+  
+
+    <form action="">
+        <h1>
+            <u>Register For Voting</u>
+        </h1>
+        <fieldset>
+            <legend>
+                <h2>
+                   <i> <u>All Fields Are Necessary</u></i>
+                </h2>
+            </legend>
+        <div>
+            First name
+        </div>
+        <div>
+            <input type="text" id="Fname">
+            
+            <span></span>
+        </div>
+        <br>
+        <div>
+            Last name
+        </div>
+        <div>
+            <input type="text" id="lname">
+            
+        </div>
+        <br>
+        <div>
+            Constituency Name
+        </div>
+        <div>
+            <input type="text">
+        </div>
+        <br>
+        <div>
+            Phone number
+        </div>
+        <div>
+            <input type="number" id="number">
+            <span></span>
+        </div>
+        <br>
+        <div>
+            Email
+        </div>
+        <div>
+            <input type="email" id="email">&nbsp;
+            <span id="e"></span>
+        </div>
+        <br>
+        <div>
+            Address 1
+        </div>
+        <div>
+            <input type="text">
+        </div>
+        <br>
+        <div>
+            Alt_Address (optional)
+        </div>
+        <div>
+            <input type="text">
+        </div>
+        <br>
+        <div>
+            Password
+        </div>
+        <div>
+            <input type="password" id="password">&nbsp;
+            <span id="pass"></span>
+
+        </div>
+        <br>
+        <div>
+            Confirm Password
+        </div>
+        <div>
+            <input type="password" id="cpassword">
+            <div id="cp"></div>
+        </div>
+        <br>
+        <div style=" display: flex; justify-content: center">
+            <input type="button" value="submit">
+        </div>
+    </fieldset>
+    </form>
+    <script>
+       
+        
+        var Fname=document.getElementById("Fname");
+        console.log(Fname);
+        var span=document.getElementsByTagName("span");
+        Fname.onkeydown=function()
+        {
+            let regex=/[a-zA-z]/;
+            console.log(Fname.value);
+            if(regex.test(Fname.value))
+            {
+                span[0].innerText="Valid";
+            }
+            else{
+                span[0].innerText="Please Enter A valid Name";
+            }
+        }
+        var number=document.getElementById("number");
+        number.onkeydown=function()
+        {
+            let regex2=/[0-9]{10}/;
+            if(regex2.test(number.value))
+            {
+                span[1].innerText="Valid Number";
+
+            }
+            else{
+
+                span[1].innerText="Please Enter A Valid Number";
+            }
+            
+        }
+        var password=document.getElementById("password");
+        password.onkeydown=function(){
+            console.log("hello");
+            let reg=/[a-z][A-Z][0-9][:.@#]/;
+            if(reg.test(password.value)){
+                pass.innerText="Strong Password";
+            }
+            else{
+                pass.innerText="Weak Password";
+            }
+        }
+        var cpassword=document.getElementById("cpassword");
+        var d=document.getElementById("cp");
+        cpassword.onkeydown=function(){
+            console.log("hello");
+            let reg=/[a-z][A-Z][0-9][:.@#]/;
+            if(reg.test(cpassword.value)){
+                cp.innerText="Suitable";
+            }
+            else{
+                cp.innerText="Not Suitable";
+            }
+        }
+        var email=document.getElementById("email");
+        var e=document.getElementById('e');
+        email.onkeydown=function()
+        {
+            console.log("email one");
+            let rege=/[a-z]\.[a-z]+\@[a-z]+\.+[a-z]{2}/;
+            if(rege.test(email.value))
+            {
+                e.innerText="Right Format";
+            }
+            else{
+                e.innerText="Please Enter A Valid Email_id";
+
+            }
+
+        }
+       $('#Fname').keydown(function(event){
+        if(event.keyCode>48 && event.keyCode<58)
+        {
+            console.log("here", event.keyCode);
+            event.preventDefault();
+        }
+       })
+       $("#number").keydown(function(event){
+        if(event.keycode>64 && event.keyCode<90)
+        {
+            console.log("character time");
+            event.preventDefault();
+        }
+       })
+    </script>
+</body>
+</html>
