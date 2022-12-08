@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="karthik pohane">
+    <meta name="description" content="5th lab for form validation using JS">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+    <link href="index.css" rel="stylesheet">
+    <script>
+        function ValidateForm() {
+            var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+              var name = document.getElementById('name').value;
+              if(!regName.test(name)){
+                  alert('Please enter your full name (first & last name).');
+                  document.getElementById('name').focus();
+                  return false;
+              }
+          
+              var phoneno = /^\d{10}$/;
+              var phone = document.getElementById('phone').value;
+              if (!phoneno.test(phone)) {
+              alert('Please provide a valid phone number');
+              phone.focus;
+              return false;
+           }
+          
+            var email = document.getElementById('email');
+              var filter = /^([a-zA-Z0-9_\.\-])+\@mca.christuniversity.in/;
+          
+              if (!filter.test(email.value)) {
+              alert('Please provide a valid email address');
+              email.focus;
+              return false;
+           }
+           var newPassword = document.getElementById('password');
+              var minNumberofChars = 8;
+              var maxNumberofChars = 16;
+              var isNonWhiteSpace = /^\S*$/;
+              var isContainsUppercase = /^(?=.*[A-Z]).*$/;
+              var isContainsLowercase = /^(?=.*[a-z]).*$/;
+              var isContainsNumber = /^(?=.*[0-9]).*$/;
+              var isContainsSymbol = /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
+              var isValidLength = /^.{8,16}$/;
+              
+              if (!isNonWhiteSpace.test(newPassword.value)) {
+              alert("Password must not contain Whitespaces.");
+              newPassword.focus;
+            }
+            if (!isContainsUppercase.test(newPassword.value)) {
+              alert("Password must have at least one Uppercase Character.");
+              newPassword.focus;
+            }
+            if (!isContainsLowercase.test(newPassword.value)) {
+              alert("Password must have at least one Lowercase Character.");
+              newPassword.focus;
+            }
+            if (!isContainsNumber.test(newPassword.value)) {
+              alert("Password must contain at least one Digit.");
+              newPassword.focus;
+            }
+            if (!isContainsSymbol.test(newPassword.value)) {
+              alert("Password must contain at least one Special Symbol.");
+              newPassword.focus;
+            }
+            if (!isValidLength.test(newPassword.value)) {
+              alert("Password must be 8-16 Characters Long.");
+              newPassword.focus;
+              return false;
+            } 
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        
+        <a href="#">Online Voting</a>
+        <div class="nav-link">
+            <a href="#">Home</a>
+            <a class="nopad" href="#"><div class="openBtn">
+                <button class="openButton" data-modal="modalZero">Register</button>
+              </div></a>
+            <a href="#">Voting</a>
+            <a href="#">Election Results</a>
+            <a class="nopad" href="#"><div class="openBtn">
+                <button class="openButton" data-modal="modalOne">Contact us</button>
+              </div></a>
+              <a class="nopad" href="#"><div class="openBtn">
+                <button class="openButton" data-modal="modalTwo">Register Complaint</button>
+              </div></a>
+        </div>
+      </header>
+
+    <div class="banner dark">
+        <p><b>We are open by appointment only</b> / Please call 760-878-0224 to schedule appointment</p>
+    </div>
+    <div class="banner light">
+        <h1>This is the new official Voting system Website</h1>
+        <p>The website has been updated to provide voters an even easier way to find important election and voting information</p>
+    </div>
+
+    <div class="content">
+        <div class="tiles"><img src="https://image.shutterstock.com/image-vector/registration-icon-on-white-background-260nw-331182206.jpg" alt="registration" usemap="#workmap"></div>
+        <div class="tiles"><img src="https://cdn-icons-png.flaticon.com/512/4812/4812397.png" alt="registration" usemap="#workmap"></div>
+        <div class="tiles"><img src="https://previews.123rf.com/images/trimulyani/trimulyani2003/trimulyani200300137/141296348-speaker-icon-vector-design-symbol.jpg" alt="registration" usemap="#workmap"></div>
+        <div class="tiles"><img src="https://image.shutterstock.com/image-vector/newspaper-icon-thin-line-web-260nw-282635822.jpg" alt="registration" usemap="#workmap"></div>
+        
+    </div>
+
+    <map name="workmap">
+        <area shape="default" alt="default" href="www.google.com">
+    </map>
+
+    <div class="list"><div><h3>Candidates</h3>
+        <ul>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+        </ul></div>
+        <div>
+        <h3>Candidates</h3>
+        <ol>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+            <li>Name</li>
+        </ol></div>
+        <div>
+        <h3>Candidates</h3>
+        <dl>
+            <dt>Candidate1</dt>
+            <dr>Name</dr>
+            <dt>Candidate2</dt>
+            <dr>Name</dr>
+            <dt>Candidate3</dt>
+            <dr>Name</dr>
+            <dt>Candidate4</dt>
+            <dr>Name</dr>
+            <dt>Candidate5</dt>
+            <dr>Name</dr>
+            <dt>Candidate6</dt>
+            <dr>Name</dr>
+            <dt>Candidate7</dt>
+            <dr>Name</dr>
+            <dt>Candidate8</dt>
+            <dr>Name</dr>
+        </dl></div>
+    </div>
+
+    <article id="song">
+      <fieldset>
+      <legend>Do you wish to hear some theme song while you decide who to vote?</legend>
+      <audio controls>
+        <source src="precipice_of_defeat.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    </fieldset>
+    </article>
+    <br><br><br><br>
+    <hr>
+    <article id="clip">
+      <p>This is what happens when you decide to vote a wrong person <br><strong>Vote Responsibly!</strong></p>
+      <video width="600" height="300" controls>
+        <source src="bunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </article>
+    <br><hr>
+
+    <article id="geo">
+      <fieldset>
+        <legend>GeoLocation</legend>
+        
+        <p>Find Our Office from Your Location</p>
+        <center>
+        <button onclick="getlocation();"> Show Position on Map</button>
+        <br>
+        <div id="demo" style="width: 700px; height: 300px;"></div>   
+    
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+      
+    <script type="text/javascript">   
+    function getlocation(){   
+        if(navigator.geolocation){   
+            navigator.geolocation.getCurrentPosition(showPos, showErr);   
+        }  
+        else{  
+            alert("Sorry! your Browser does not support Geolocation API")  
+        }  
+    }   
+    //Showing Current Poistion on Google Map  
+    function showPos(position){   
+        latt = position.coords.latitude;   
+        long = position.coords.longitude;   
+        var lattlong = new google.maps.LatLng(latt, long);   
+        var myOptions = {   
+            center: lattlong,   
+            zoom: 15,   
+            mapTypeControl: true,   
+            navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}   
+        }   
+        var maps = new google.maps.Map(document.getElementById("demo"), myOptions);   
+        var markers =   
+        new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"});   
+    }   
+
+    //Handling Error and Rejection  
+         function showErr(error) {  
+          switch(error.code){  
+          case error.PERMISSION_DENIED:  
+         alert("User denied the request for Geolocation API.");  
+          break;  
+         case error.POSITION_UNAVAILABLE:  
+         alert("USer location information is unavailable.");  
+        break;  
+        case error.TIMEOUT:  
+        alert("The request to get user location timed out.");  
+        break;  
+       case error.UNKNOWN_ERROR:  
+        alert("An unknown error occurred.");  
+        break;  
+       }  
+    }         
+    </script> 
+    </center>
+    </fieldset>
+    </article>
+    <br><hr>
+
+    <article id="canva">
+      <fieldset>
+        <legend> Canvas </legend>
+        <center>
+            <canvas id="mycanvas" width="700px" height="300px" style="border:1px solid #000000;"></canvas>
+        <script>
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("#voteINDIAvote",250,150);
+        </script>
+        </center>
+    </fieldset>
+    <br>
+    </article>
+    <article id="contact">
+      <h3>Our Contact Form</h3>
+      <fieldset>
+          <legend>Send us a message</legend>
+          <div class="form-container" onsubmit="return ValidateForm()">
+            <form name="1form" action="">
+                <p>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Jane Doe" required>
+                </p>
+                <p>
+                  <label for="phone">Phone: </label>
+                  <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+                </p>
+                <p>
+                    <label for="email">Email ID: </label>
+                    <input type="text" name="email" id="email" placeholder="example@email.com" required>
+                </p>
+                <p>
+                  <label for="country">Country: </label>
+                  <select id="country" name="country">
+                      <option value="canada">India</option>
+                      <option value="australia">Australia</option>
+                      <option value="usa">USA</option>
+                  </select>
+                </p>
+                <p>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>
+                </p>
+                <p>
+                    <label for="message">Your message: </label><br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset">Reset</button>
+                </p>
+            </form>
+          </div>
+      </fieldset>
+  </article>
+  <hr>
+</main>
+<footer>
+  <p>
+      Copyright &copy; 2247211
+  </p>
+</footer>
+
+</body>
+</html>
