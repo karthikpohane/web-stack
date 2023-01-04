@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 6 - Cookies</title>
+    <link rel="stylesheet" href="lab6.css">
+    <script src="lab06.js"></script>
+</head>
+<body onload="setColor()" id="bd">
+    <div class="main--container">
+        <div class="form--container" id="mc">
+            <div class="">
+                Accessibility Option: Color Picker: <input id="color" type="color" value="#ffffff" onchange="changecolor(this)" />
+                <p class="register--now--text">Register Now!</p>
+            </div>
+            <form id="formid" class="form--class">
+                <div class="form--element">
+                    <label class="label--class">Full Name</label>
+                    <input onkeydown="nameValidation()" id="fullname" class="input--text" type="text" placeholder="Ex. Karthik Pohane"/>
+                    <p id="name-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Date of Birth</label>
+                    <input id="dateofbirth" class="input--text" type="date" />
+                    <p id="message" class="message--class"></p>
+                </div>
+
+
+                <div class="form--element">
+                    <label class="label--class">Email</label>
+                    <input onkeydown="emailValidation()" id="email" class="input--text" type="email" placeholder="karthik.pohane@gmail.com"/>
+                    <p id="email-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Phone Number</label>
+                    <input onkeydown="phoneValidation()" id="phone" class="input--text" type="number" placeholder="8686898990" />
+                    <p id="phone-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Username</label>
+                    <input id="username" class="input--text" type="text" placeholder="kartiiikk"/>
+                    <p id="username-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Password</label>
+                    <input onkeydown="passwordValidation()" id="password" class="input--text" type="password" placeholder="One lower, One upper, one numeric, one special" />
+                    <p id="password-message" class="message--class"></p>
+                </div>
+                
+                <div class="form--element">
+                    <button onclick="storeValues()" class="button--class">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: sans-serif;
+}
+.main--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 40px;
+}
+
+.form--container{
+    background-color: rgb(224, 219, 57);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 40px;
+    width: 50%;
+}
+
+.form--class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.label--class{
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 0px 0px 10px 5px;
+}
+
+.input--text{
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    text-indent: 10px;
+}
+
+.register--now--text{
+    font-size: 3rem;
+    font-weight:800;
+    color: #641974;
+    padding: 20px;
+    
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 70px;
+
+}
+
+.form--element{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+
+.button--class{
+    background-color:#641974;
+    color: white;
+    padding: 10px;
+    width: 90%;
+}

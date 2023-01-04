@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        .main--container{
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .form--container{
+            background-color: rgb(224, 219, 57);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px auto;
+            padding: 40px;
+            width: 50%;
+        }
+
+
+        button{
+            background-color: #641974;  
+            width: 60%;
+            color: white;  
+            padding: 12px 20px;  
+            margin: 8px 10px;  
+            border: none;  
+            cursor: pointer;  
+            opacity: 0.9;  
+            font-family: 'Domine', serif;
+            font-family: 'Spectral', serif;
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        #btns{
+            margin:  auto;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main--container">
+        <div class="form--container" id="mc">
+            <button type="button" onclick="getCookie()">
+                Read Cookie
+            </button>
+            <button type="button" onclick="setCookie()">
+                Add Cookie
+            </button>
+            <button type="button" onclick="delete_cookie()">
+                Delete Cookie
+            </button>
+        </div>
+    </div>
+
+    <script>
+
+
+        function delete_cookie(){
+            let name = prompt("Please enter cookie name to delete");
+            document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        
+        function getCookie(){
+            let cname = prompt("Please enter cookie name to read");
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                alert(c.substring(name.length, c.length));
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function setCookie(){
+            let cname = prompt("Please enter cookie name to add");
+            let cvalue= prompt("Please enter value of cookie");
+            const d = new Date();
+            d.setTime(d.getTime() + (3*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+    </script>
+
+</body>
+</html>
