@@ -1,0 +1,44 @@
+[
+    {
+        "Reg_Date": "2022-11-20",
+        "name": "Aniket Singh",
+        "gender": "m",
+        "date": "2000-04-06"
+        
+    },
+    {
+        "Reg_Date": "2022-11-04",
+        "name": "Harsh Vardhan",
+        "gender": "m",
+        "date": "2000-12-17"
+        
+    },
+    {
+        "Reg_Date": "2022-10-31",
+        "name": "Karthik Pohane",
+        "gender": "m",
+        "date": "1999-07-04"
+        
+    },
+    {
+        "Reg_Date": "2022-11-04",
+        "name": "Tiyasa Chakavarty",
+        "gender": "f",
+        "date": "2001-03-04"
+        
+    },
+    {
+        "Reg_Date": "2022-11-04",
+        "name": "Ranveer Singh",
+        "gender": "m",
+        "date": "2000-12-25"
+    
+    },
+    {
+        "Reg_Date": "2022-11-04",
+        "name": "Ranbir Kapoor",
+        "gender": "m",
+        "date": "2001-02-14"
+        
+    }
+]
